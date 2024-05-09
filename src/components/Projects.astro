@@ -1,14 +1,14 @@
 ---
-import GitHub from "./icons/GitHub.astro";
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
+import Stripe from "./icons/Stripe.astro";
 
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-black text-white",
+    class: "bg-[#003159] text-white",
     icon: NextJS,
   },
   TAILWIND: {
@@ -16,22 +16,27 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  STRIPE: {
+    name: "Stripe",
+    class: "bg-[#003159] text-white",
+    icon: Stripe,
+  },
 };
 const PROJECTS = [
   {
     title: "UberToursCancun - Tours and Yachts",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Built from scratch with Next.js, React and Tailwind CSS.",
+      "E-commerce like application with ability to handle own tours and yachts information, payments managed by Stripe using webhooks to ensure fidelity of payments. Built from scratch with Next.js, React and Tailwind CSS.",
     link: "https://www.ubertourscancun.com/",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    image: "/projects/ubertours.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.STRIPE],
   },
   {
     title: "Logex - Paquetería y mensajería",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Built from scratch with Next.js, React and Tailwind CSS.",
+      "Logistics management internal application, tracks +10,000 packages each month all over the peninsula of Yucatan. Built from scratch with Next.js, React and Tailwind CSS.",
     link: "https://logex.vercel.app/",
-    image: "/projects/adventjs.webp",
+    image: "/projects/logex.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
 ];
@@ -44,7 +49,7 @@ const PROJECTS = [
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              alt="Project Image"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}
