@@ -22,6 +22,11 @@ const navItems = [
     label: "contact",
     url: "mailto:ortegapablo96@gmail.com",
   },
+  {
+    title: "Resume",
+    label: "resume",
+    url: "/pablo-cv.pdf",
+  },
 ];
 ---
 
@@ -37,6 +42,10 @@ const navItems = [
           class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
           aria-label={link.label}
           href={link.url}
+          {...(link.label === "resume" && {
+            target: "_blank",
+            rel: "noopener noreferrer",
+          })}
         >
           {link.title}
         </a>
